@@ -1,0 +1,36 @@
+# ---------- Unity (TacticalAI-Unity/) ----------
+TacticalAI-Unity/[Ll]ibrary/
+TacticalAI-Unity/[Tt]emp/
+TacticalAI-Unity/[Oo]bj/
+TacticalAI-Unity/[Bb]uild/
+TacticalAI-Unity/[Bb]uilds/
+TacticalAI-Unity/[Ll]ogs/
+TacticalAI-Unity/[Uu]ser[Ss]ettings/
+TacticalAI-Unity/[Mm]emoryCaptures/
+TacticalAI-Unity/[Rr]ecordings/
+TacticalAI-Unity/Assets/Plugins/Editor/JetBrains*
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+
+# ---------- Python (simulation/) ----------
+__pycache__/
+*.pyc
+.venv/
