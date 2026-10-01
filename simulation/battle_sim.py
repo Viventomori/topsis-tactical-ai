@@ -45,11 +45,11 @@ def in_cover(x):
 def matrix_v1(ammo, stamina, allies, enemies, cover, threat):
     """Початкові формули (Таблиця 1 початкової версії статті)."""
     return [
-        [clamp01(ammo / 30) * 10, clamp01(stamina / 80) * 10, clamp01(allies / 3) * 10,
+        [clamp01(ammo / 30) * 10, clamp01(hp / 80) * 10, clamp01(allies / 3) * 10,
          clamp01(1 - enemies / 4) * 10, 6 if cover else 4, clamp01(1 - threat / 10) * 10],
-        [clamp01(ammo / 50) * 7, clamp01(stamina / 50) * 8, clamp01(allies / 2) * 7,
+        [clamp01(ammo / 30) * 4.2, clamp01(hp / 50) * 8, clamp01(allies / 2) * 7,
          clamp01(enemies / 4) * 8, 10 if cover else 3, clamp01(threat / 10) * 7],
-        [clamp01(1 - ammo / 15) * 10, clamp01(1 - stamina / 30) * 10, clamp01(1 - allies / 3) * 8,
+        [clamp01(1 - ammo / 15) * 10, clamp01(1 - hp / 30) * 10, clamp01(1 - allies / 3) * 8,
          clamp01(enemies / 6) * 10, 3 if cover else 7, clamp01(threat / 10) * 10],
     ]
 
