@@ -42,7 +42,7 @@ def in_cover(x):
 
 
 # ---------------- матриці рішень ----------------
-def matrix_v1(ammo, stamina, allies, enemies, cover, threat):
+def matrix_v1(ammo, hp, allies, enemies, cover, threat):
     """Початкові формули (Таблиця 1 початкової версії статті)."""
     return [
         [clamp01(ammo / 30) * 10, clamp01(hp / 80) * 10, clamp01(allies / 3) * 10,
@@ -54,12 +54,12 @@ def matrix_v1(ammo, stamina, allies, enemies, cover, threat):
     ]
 
 
-def matrix_v2(ammo, stamina, allies, enemies, cover, threat):
+def matrix_v2(ammo, hp, allies, enemies, cover, threat):
     """Удосконалені формули: для Retreat S1, S2 — плавні спадні функції від максимуму,
     які не обнуляються при середніх значеннях ресурсу."""
-    m = matrix_v1(ammo, stamina, allies, enemies, cover, threat)
+    m = matrix_v1(ammo, hp, allies, enemies, cover, threat)
     m[2][0] = clamp01(1 - ammo / AMMO_MAX) * 10
-    m[2][1] = clamp01(1 - stamina / HP_MAX) * 10
+    m[2][1] = clamp01(1 - hp / HP_MAX) * 10
     return m
 
 
